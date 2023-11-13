@@ -14,10 +14,10 @@ public class ProjectOne {
 
     String url = "jdbc:mysql://127.0.0.1:3306/project_one";
     String username = "root";
-    String password = "Bloc";
+    String password = "Taiwo";
 
     public static void createTable() {
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/project_one", "root", "Bloc");
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/project_one", "root", "Taiwo");
              Statement statement = connection.createStatement()) {
 
             String create = "CREATE TABLE IF NOT EXISTS users(name Text, email Text, age Integer, password Text, location Text, designation text)";
@@ -42,11 +42,6 @@ public class ProjectOne {
 
 
             for (int i = 0; i < 10; i++) {
-                String name;
-                String email;
-                int age;
-                String location;
-                String designation;
 
                 System.out.println("Input your Name: ");
                 name = scanner.nextLine();
